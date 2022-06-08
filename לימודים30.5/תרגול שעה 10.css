@@ -1,9 +1,0 @@
-.card > h1 {
-  color: blue;
-}
-.card > p.description,
-.card > p.price {
-  border: 10px;
-  color: blueviolet;
-}
-.div {inline-block}
