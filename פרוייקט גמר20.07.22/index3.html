@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>עדלאידע חולון</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  </style>
+  <body id="body-index3"> <header>
+    <div class="flex-container flex-grow"></div>
+    
+    <nav class="nav-menu">
+      <a href="index.html">העיר חולון</a> 
+      <a href="./index2.html">/חולון לקטנטנים/</a>
+      <a href="index3.html">/חולון לעסקים/</a>
+      <a href="./index4.html">/חולון למבלים/</a>
+      <a href="index5.html">/חולון לתושבים</a>
+     
+       <img src="./עיריית חולון - העדלאידע_png/logo.png" alt="logo-png"
+      /></a>
+    </nav>
+    <h1 class="style-font">עדלאידע חולון כולם מגיעים</h1>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Rubik+Moonrocks&display=swap");
+    </style>
+  </header>
+  
+  <h2 style="text-align:center">Lightbox</h2>
+  
+  <div class="row">
+    <div class="column">
+      <img src="./עיריית חולון - העדלאידע_png/edoardo-maresca-VsIcWolOLNo-unsplash.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./עיריית חולון - העדלאידע_png/sung-jin-cho-lWFRVZBdaDg-unsplash.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./עיריית חולון - העדלאידע_png/thomas-kinto-M9YN-JH9J5w-unsplash.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./עיריית חולון - העדלאידע_png/thomas-park-den6EylZH9w-unsplash.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="./עיריית חולון - העדלאידע_png/edoardo-maresca-VsIcWolOLNo-unsplash.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="./עיריית חולון - העדלאידע_png/sung-jin-cho-lWFRVZBdaDg-unsplash.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="./עיריית חולון - העדלאידע_png/thomas-kinto-M9YN-JH9J5w-unsplash.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="./עיריית חולון - העדלאידע_png/thomas-park-den6EylZH9w-unsplash.jpg" style="width:100%">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+  
+      <div class="column">
+        <img class="demo cursor" src="./עיריית חולון - העדלאידע_png/edoardo-maresca-VsIcWolOLNo-unsplash.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./עיריית חולון - העדלאידע_png/sung-jin-cho-lWFRVZBdaDg-unsplash.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./עיריית חולון - העדלאידע_png/thomas-kinto-M9YN-JH9J5w-unsplash.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="./עיריית חולון - העדלאידע_png/thomas-park-den6EylZH9w-unsplash.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+      
+      <footer>
+        <section class="section-3-img-footer">
+          <a href="https://www.youtube.com/user/HolonMunicipality">
+            <img src="./עיריית חולון - העדלאידע_png/youtube.png"
+          /></a>
+          <a href="https://www.instagram.com/holon.muni/?igshid=zb0iddlodcfs">
+            <img class="" src="./עיריית חולון - העדלאידע_png/insta.png" />
+          </a>
+  
+          <a
+            href="https://www.holon.muni.il/CityHall/Pages/AccessibilityDeclaration.aspx"
+            ><img class="" src="עיריית חולון - העדלאידע_png/negishut.jpg" 
+          /></a>
+          <a href="https://www.facebook.com/holon.muni/">
+            <img class="" src="./עיריית חולון - העדלאידע_png/dacebook.png"
+          /></a>
+          <a href="https://t.me/holonmuni">
+            <img class="" src="./עיריית חולון - העדלאידע_png/telegram.png"
+          /></a>
+          <p>
+            עיריית חולון, ויצמן 58, 58737309, טל': 03-5027222, פקס: 03-6511851
+          </p>
+        </section>
+      </footer>
+
+
+  </body>
+
+
+</html>
